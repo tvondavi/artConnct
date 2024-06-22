@@ -21,7 +21,9 @@ from langgraph.graph import END, StateGraph
 local_llm = "llama3"
 
 # vectorstore = Chroma(persist_directory=persist_dir, embedding_function=embedding)
-loader = CSVLoader(file_path="../AppraiSetRAG.csv")
+
+#################### Double check that this csv file is in the proper path #########################
+loader = CSVLoader(file_path="AppraiSetRAG.csv")
 data = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
